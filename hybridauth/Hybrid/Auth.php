@@ -58,7 +58,7 @@ class Hybrid_Auth
 		$config["path_base"]        = realpath( dirname( __FILE__ ) )  . "/"; 
 		$config["path_libraries"]   = $config["path_base"] . "thirdparty/";
 		$config["path_resources"]   = $config["path_base"] . "resources/";
-		$config["path_providers"]   = $config["path_base"] . "Providers/";
+		$config["path_providers"]   = (isset($config['path_providers'])) ? $config['path_providers'] : $config["path_base"] . "Providers/";
 
 		// reset debug mode
 		if( ! isset( $config["debug_mode"] ) ){
